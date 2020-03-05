@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" type="text/css" href = "WebsiteHomepage.css">
+    <script src="Website.js"></script>
+</head>
+<html>
+    <h1>Water for the World</h1>
+
+    <div class="topnav">
+        <a href="/Users/laurenthompson/Documents/Website - Jana/My part - about us, contact/Page 4 - Contact/contact.html">Contact</a>
+        <a href="/Users/laurenthompson/Documents/Website - Jana/CurrentProjects.html">Current Projects</a>
+        <a href="/Users/laurenthompson/Documents/Website - Jana/My part - about us, contact/Page 2 - About us/aboutus.html">About Us</a>
+      </div>
+
+      <!DOCTYPE html>
+      <html>
+      <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <style>
+      * {
+        box-sizing: border-box;
+      }
+      
+      body {
+        margin: 0;
+        font-family: Arial;
+      }
+      
+      .column {
+        float: left;
+        width: 25%;
+        padding: 10px;
+      }
+      
+      .column img {
+        opacity: 0.8; 
+        cursor: pointer; 
+      }
+      
+      .column img:hover {
+        opacity: 1;
+      }
+      
+      
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      
+      .container {
+        position: relative;
+        display: none;
+      }
+      
+      
+      #imgtext {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        color: white;
+        font-size: 20px;
+      }
+      
+      
+      .closebtn {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        color: white;
+        font-size: 35px;
+        cursor: pointer;
+      }
+      </style>
+      </head>
+      <body>
+      
+      <div style="text-align:center">
+        <h2>Gallery of our Work</h2>
+        <p>Click to view in full size:</p>
+      </div>
+      
+      <div class="row">
+        <div class="column">
+          <img src="image1.jpeg" alt="Infographic" style="width:100%" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+          <img src="image2.jpeg" alt="Our Well in Ghana" style="width:100%" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+          <img src="image3.jpeg" alt="Benefits of the Well" style="width:100%" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+          <img src="image4.jpeg" alt="Pumping at the Well" style="width:100%" onclick="myFunction(this);">
+        </div>
+      </div>
+      
+      <div class="container">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <img id="expandedImg" style="width:100%">
+        <div id="imgtext"></div>
+      </div>
+      
+      <script>
+      function myFunction(imgs) {
+        var expandImg = document.getElementById("expandedImg");
+        var imgText = document.getElementById("imgtext");
+        expandImg.src = imgs.src;
+        imgText.innerHTML = imgs.alt;
+        expandImg.parentElement.style.display = "block";
+      }
+      </script>
+      
+      <footer id="main-footer">
+        <p>  Lauren Thompson and Jana Hajkova <br>
+           &copy; 2020</p>
+      </footer>
+      
+      </body>
+      </html>
+      
+      
